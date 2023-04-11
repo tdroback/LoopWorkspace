@@ -28,6 +28,22 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
+          
+      # Customize Loop: Download and apply patches
+      - name: Customize Loop
+        run: |
+
+          # For each patch, edit comment line (keep the #) then update curl (and remove the #)
+
+          # Submodule Loop patches:
+          # Loop: Filename: customization details
+          #curl https://github.com/username/Loop/commit/SHA-1.patch | git apply -v --directory=Loop
+
+          # Submodule LoopKit patches:
+          # LoopKit: LoopKitUI/Extensions/Environment+Authenticate.swift: Remove Authentification
+          curl https://github.com/tdroback/LoopKit/commit/e3ce5361dd5545a46af8badd56b354625a6197c9.patch | git apply -v --directory=LoopKit
+
+          # Submodule xxxxx patches: Follow prototype above
       
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
