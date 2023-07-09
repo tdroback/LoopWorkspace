@@ -42,7 +42,6 @@ jobs:
           # Submodule LoopKit patches:
           # LoopKit: LoopKitUI/Extensions/Environment+Authenticate.swift: Remove Authentification
           curl https://github.com/tdroback/LoopKit/commit/e3ce5361dd5545a46af8badd56b354625a6197c9.patch | git apply -v --directory=LoopKit
-          curl https://github.com/tdroback/LoopKit/commit/6f4206250ea773caea13ebb43e2db735bf327e73.patch | git apply -v --directory=LoopKit
 
           # Submodule xxxxx patches: Follow prototype above
       
